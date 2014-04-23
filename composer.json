@@ -1,3 +1,6 @@
-"require": {
-    "livefyre/livefyre-php-utils": "1.1.2"
+{
+	"require": {
+	    "livefyre/livefyre-php-utils": "1.1.2",
+		"firebase/php-jwt": "dev-master"
+	}
 }

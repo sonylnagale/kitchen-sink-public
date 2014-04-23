@@ -1,6 +1,12 @@
 <?php
 
 /*
+ * Include dependencies from Composer
+ */
+
+include_once './vendor/autoload.php';
+
+/*
  *---------------------------------------------------------------
  * APPLICATION ENVIRONMENT
  *---------------------------------------------------------------
