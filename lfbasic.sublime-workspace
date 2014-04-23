@@ -1,0 +1,228 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"conv",
+				"convConfig"
+			],
+			[
+				"is_n",
+				"is_null"
+			],
+			[
+				"body",
+				"bodyData"
+			],
+			[
+				"nav",
+				"navData"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"networ",
+				"networkConfig"
+			],
+			[
+				"t",
+				"type	Attr"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 347.0,
+		"selected_items":
+		[
+			[
+				"Packa",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/pcolombo/Sites/local.basic/application/models/data_cache.php",
+		"/Users/pcolombo/Sites/local.basic/application/views/comments.php",
+		"/Users/pcolombo/Sites/local.basic/application/config/constants.php",
+		"/Users/pcolombo/Sites/local.basic/application/views/sidenotes.php",
+		"/Users/pcolombo/Sites/local.basic/application/views/mediawall.php",
+		"/Users/pcolombo/Sites/local.basic/application/config/config.php",
+		"/Users/pcolombo/Sites/starmark.fyre.co/mediawall.html",
+		"/Users/pcolombo/Sites/local.basic/application/views/liveblog.php",
+		"/Users/pcolombo/Sites/local.basic/application/views/livechat.php",
+		"/Users/pcolombo/Sites/local.basic/application/views/livereviews.php",
+		"/Users/pcolombo/Sites/local.basic/application/helpers/livefyre_helper.php",
+		"/Users/pcolombo/Sites/local.basic/application/config/routes.php",
+		"/Users/pcolombo/Sites/local.basic/application/config/autoload.php",
+		"/Users/pcolombo/Sites/local.basic/application/views/shared/_header.php",
+		"/Users/pcolombo/Sites/local.basic/application/views/shared/_footer.php",
+		"/Users/pcolombo/Sites/local.basic/.htaccess",
+		"/Users/pcolombo/Sites/local.basic/application/.htaccess",
+		"/Users/pcolombo/Sites/local.basic/application/controllers/main_controller.php",
+		"/Users/pcolombo/Downloads/comments 2/fyre.css",
+		"/Users/pcolombo/Desktop/conde sbr template invite.txt",
+		"/Users/pcolombo/Sites/local.basic/application/views/gallery.php",
+		"/Users/pcolombo/Sites/local.basic/application/views/shared/_navbar.php",
+		"/Users/pcolombo/Sites/local.basic/index.php",
+		"/Users/pcolombo/Sites/local.basic/application/views/home.php",
+		"/Users/pcolombo/Sites/local.basic/derp.php",
+		"/Users/pcolombo/Sites/local.basic/application/JWT.php",
+		"/Users/pcolombo/Sites/local.basic/application/JWT.html",
+		"/Users/pcolombo/Sites/local.basic/application/models/lf_collection_meta.php",
+		"/Users/pcolombo/Sites/local.basic/application/helpers/livefyre.php",
+		"/Users/pcolombo/Sites/local.basic/system/core/Controller.php",
+		"/Users/pcolombo/Sites/local.basic/application/views/welcome.php",
+		"/Users/pcolombo/Sites/local.basic/application/views/shared/_Layout.php",
+		"/Users/pcolombo/Sites/local.basic/application/core/MY_Controller.php",
+		"/Users/pcolombo/Sites/local.basic/application/views/welcome_message.php",
+		"/Users/pcolombo/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/pcolombo/Sites/local.basic/.gitignore",
+		"/Users/pcolombo/Sites/index.html",
+		"/Users/pcolombo/Sites/index.php"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"height: 58",
+			"collectionMeta"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "lfbasic.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 251.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+		"max_columns": 2
+	}
+}
