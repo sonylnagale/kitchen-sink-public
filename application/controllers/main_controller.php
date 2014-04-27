@@ -24,6 +24,7 @@ class Main_Controller extends CI_Controller {
 
 	public function index($page = null)
 	{
+		phpinfo();die;
 		
 		$navData = $this->Data_cache->get_all();
 		
@@ -32,13 +33,26 @@ class Main_Controller extends CI_Controller {
 			$bodyData = '';
 		} else {				// Not home page
 			$bodyData = $this->Data_cache->get_article($page);
-			$bodyData[COLLECTION_META] = lf_get_collection_meta($bodyData);	
+			$metadata = $this->Content->generateCollectionMetadata(array(
+				'article_id' => $bodyData['articleid'],
+				'title' => $bodyData['articletitle'],
+				'url' => base_url().$bodyData['articleurl'],
+				'type' => (isset($bodyData['collectiontype'])) ? $bodyData['collectiontype'] : NULL,
+				'tags' => (isset($bodyData['collectiontags'])) ? $bodyData['collectiontags'] : NULL
+			));
+			$bodyData[COLLECTION_META] = $metadata['collectionMeta'];
+			$bodyData[CHECKSUM] = $metadata['checksum'];
 		}
 		
 		$data = array(
 			DATA_NAV => $navData, 
 			DATA_BODY => $bodyData
 		);
+		
+		$data[DATA_BODY]['USER'] = $this->User->getUserToken(array(
+			'user_id' => 'createtestsn',
+			'display_name' => 'create test sn'
+		));
 		
 		$this->load->view('shared/_header',$data);
 		$this->load->view('shared/_navbar');

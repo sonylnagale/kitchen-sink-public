@@ -46,7 +46,7 @@ define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
 */
 /* Production Network */
 define('LIVEFYRE_NETWORK',				'client-solutions.fyre.co');
-define('LIVEFYRE_NETWORK_SECRET', 		'DB3NbkykLEYo78kRCrSrDJGQSzw=');
+define('LIVEFYRE_NETWORK_KEY', 			'DB3NbkykLEYo78kRCrSrDJGQSzw=');
 define('LIVEFYRE_JS_SOURCE_DOMAIN', 	'zor.livefyre.com');
 define('LIVEFYRE_JS_SOURCE_URL',		'http://zor.livefyre.com/wjs/v3.0/javascripts/livefyre.js');
 define('LIVEFYRE_SITE_ID', 				'351624');
@@ -54,6 +54,8 @@ define('LIVEFYRE_SITE_KEY',				'FeqOUZRn5oNm1keV+IVDeFOoO+o=');
 define('LIVEFYRE_SITE_URL', 			'http://local.livefyre.com/');
 define('LIVEFYRE_SYSTEM_USER_TOKEN', 	'eyJhbGciOiAiSFMyNTYiLCAidHlwIjogIkpXVCJ9.eyJkb21haW4iOiAiY2xpZW50LXNvbHV0aW9ucy5meXJlLmNvIiwgImV4cGlyZXMiOiAxNDAwODU4NTIyLjY3NjU5OCwgInVzZXJfaWQiOiAic3lzdGVtIn0.HBbCbJ_AwhEO4uJP3qyXhCCScM0WP5VHhNoCk_5H-2o');
 
+/* Use the Livefyre library or not */
+define('LIVEFYRE_LIBRARY',				true);
 
 /* UAT Network 
 define('LIVEFYRE_NETWORK',				'client-solutions-uat.fyre.co');
