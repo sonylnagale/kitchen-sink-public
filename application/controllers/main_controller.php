@@ -23,9 +23,7 @@ class Main_Controller extends CI_Controller {
 	}
 
 	public function index($page = null)
-	{
-		phpinfo();die;
-		
+	{		
 		$navData = $this->Data_cache->get_all();
 		
 		if(is_null($page)) {	// Home page
