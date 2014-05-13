@@ -16,11 +16,12 @@ class Content extends CI_Model {
 	public function generateCollectionMetadata($params) {
 		$defaults = array(
 			'tags' => NULL,
-			'stream_type' => NULL
+			'stream_type' => NULL,
+			'ratingDimensions' => NULL
 		);
 		
 		$params = $params + $defaults;
-		
+				
 		if (LIVEFYRE_LIBRARY) {
 			if (!isset($params['title']) || 
 				!isset($params['url'])	||
@@ -29,7 +30,7 @@ class Content extends CI_Model {
 			}
 			
 			$checksum = $this->_site->buildChecksum($params['title'], $params['url'], $params['tags']);
-			$collectionMeta = $this->_site->buildCollectionMetaToken($params['title'], $params['article_id'], $params['url'], $params['tags'], $params['type']);
+			$collectionMeta = $this->_site->buildCollectionMetaToken($params['title'], $params['article_id'], $params['url'], $params['tags'], $params['type'], $params['ratingDimensions']);
 			return array(
 				'checksum' => $checksum,
 				'collectionMeta' => $collectionMeta
