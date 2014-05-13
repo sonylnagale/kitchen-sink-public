@@ -11,7 +11,7 @@ class Data_cache extends CI_Model {
 
         $this->CACHE = array(
             "comments" => array(
-                ARTICLE_ID      => DEMO_ARTICLE_ID_PREFIX."0001", //11, 12, 13, 14, 15
+                ARTICLE_ID      => DEMO_ARTICLE_ID_PREFIX."0011", //11, 12, 13, 14, 15
                 ARTICLE_TITLE   => "Comments",
                 ARTICLE_URL     => "comments"
             ),
@@ -28,10 +28,11 @@ class Data_cache extends CI_Model {
                 COLLECTION_TYPE => TYPE_LIVECHAT
             ),
             "livereviews" => array(
-                ARTICLE_ID      => DEMO_ARTICLE_ID_PREFIX."0004",
+                ARTICLE_ID      => DEMO_ARTICLE_ID_PREFIX."00044",
                 ARTICLE_TITLE   => "Live Reviews",
                 ARTICLE_URL     => "livereviews", 
-                COLLECTION_TYPE => TYPE_LIVEREVIEWS
+                COLLECTION_TYPE => TYPE_LIVEREVIEWS,
+            	DIMENSIONS => array('design','features','performance')
             ),
             "sidenotes" => array(
                 ARTICLE_ID      => DEMO_ARTICLE_ID_PREFIX."sidenotes_0001",
