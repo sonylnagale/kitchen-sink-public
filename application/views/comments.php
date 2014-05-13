@@ -17,8 +17,7 @@
 		articleId: '<?=${DATA_BODY}[ARTICLE_ID]?>',
 		el: 'livefyre',
 		collectionMeta: '<?=${DATA_BODY}[COLLECTION_META]?>', 
-		checksum: '<?=${DATA_BODY}[CHECKSUM]'?>
-		commenting_enabled: false
+		checksum: '<?=${DATA_BODY}[CHECKSUM]?>'
 	}
 
 	fyre.conv.load( networkConfig, [convConfig] );
