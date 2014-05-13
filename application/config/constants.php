@@ -84,7 +84,8 @@ define('ARTICLE_URL', 					'articleurl');
 define('ARTICLE_TAGS',					'articletags');
 define('COLLECTION_TYPE',				'collectiontype');
 define('COLLECTION_META', 				'collectionmeta');
-
+define('CHECKSUM', 						'checksum');
+define('DIMENSIONS',					'ratingDimensions');
 // View Data Containers
 define('DATA_NAV',						'datanav');
 define('DATA_BODY',						'databody');
