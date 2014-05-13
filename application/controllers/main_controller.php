@@ -36,7 +36,8 @@ class Main_Controller extends CI_Controller {
 				'title' => $bodyData['articletitle'],
 				'url' => base_url().$bodyData['articleurl'],
 				'type' => (isset($bodyData['collectiontype'])) ? $bodyData['collectiontype'] : NULL,
-				'tags' => (isset($bodyData['collectiontags'])) ? $bodyData['collectiontags'] : NULL
+				'tags' => (isset($bodyData['collectiontags'])) ? $bodyData['collectiontags'] : NULL,
+				'ratingDimensions' => (isset($bodyData['ratingDimensions'])) ? $bodyData['ratingDimensions'] : NULL,
 			));
 			$bodyData[COLLECTION_META] = $metadata['collectionMeta'];
 			$bodyData[CHECKSUM] = $metadata['checksum'];
