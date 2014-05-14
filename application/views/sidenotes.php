@@ -1,4 +1,4 @@
-<h1><?=${DATA_BODY}[ARTICLE_TITLE]?></h1>
+<h1><?=${DATA_BODY}['title']?></h1>
 <p>This page provides an example of <a href="http://vimeo.com/livefyre/introducing-sidenotes" target="_blank">Sidenotes</a>, which is incredibly awesome.</p>
 
 
@@ -34,9 +34,10 @@
 		authDelegate: lfepAuthDelegate,
 		selectors: '.lf-sidenotes',
 		siteId: '<?=LIVEFYRE_SITE_ID?>',
-		articleId: '<?=${DATA_BODY}[ARTICLE_ID]?>',
+		articleId: '<?=${DATA_BODY}['articleId']?>',
 		el: 'livefyre',
-		collectionMeta: '<?=${DATA_BODY}[COLLECTION_META]?>', 
+		collectionMeta: '<?=${DATA_BODY}['COLLECTION_META']?>',
+		checksum: '<?=${DATA_BODY}['CHECKSUM']?>',
 		position: 'bottom'
 	}
 

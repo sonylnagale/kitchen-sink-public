@@ -8,7 +8,7 @@
 		 "liveblog": [{
 		 	"articleId" : "{{DEMO_ARTICLE_ID_PREFIX}}_0002",
 		 	"title" : "Live Blog",
-		 	"url" : "{{DEMO_URL_PREFIX}}}/liveblog",
+		 	"url" : "{{DEMO_URL_PREFIX}}/liveblog",
 		 	"type": "liveblog"
 		 }],
 		 "livechat": [{

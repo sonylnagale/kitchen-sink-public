@@ -69,7 +69,7 @@ define('LIVEFYRE_SYSTEM_USER_TOKEN', 	'eyJhbGciOiAiSFMyNTYiLCAidHlwIjogIkpXVCJ9.
 define('DEMO_MEDIA_WALL_ID',			'custom-1395952392273');
 */
 
-define('DEMO_ARTICLE_ID_PREFIX',		'snowy-delicate-frost');
+define('DEMO_ARTICLE_ID_PREFIX',		'little-broken-silence');
 
 // LF App Types
 define('TYPE_LIVEBLOG',					'liveblog');

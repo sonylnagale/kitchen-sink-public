@@ -1,59 +1,16 @@
-<h1><?=${DATA_BODY}[ARTICLE_TITLE]?></h1>
+<h1><?=${DATA_BODY}['title']?></h1>
 <p>This page provides an example of the <a href="http://docs.livefyre.com/developers/reference/app-types/reviews/" target="_blank">Live Reviews</a> app, which is part of StreamHub Core.</p>
 
 <div id="livefyre">Coming soon!</div>
 
-        <style type='text/css'>
-            .fyre-reviews .fyre-editor {
-                margin: 24px 0 10px 0 !important;
-            }
-            .fyre .fyre-editor-ratings {
-                position: relative !important;
-                top: -6px !important;
-            }
-            .fyre .fyre-editor-ratings button,
-            .fyre .fyre-reviews-rating-wrapper span {
-                background-color: #F5FF00;
-                border: 1px dotted #666;
-                color: #000;
-                cursor: pointer;
-                display: inline-block;
-                margin-right: 8px;
-                padding: 3px 6px;
-            }
-            .fyre .fyre-reviews-rating-wrapper span strong {
-                margin-right: 4px;
-            }
-            .fyre .fyre-editor-ratings > div {
-                float: left;
-                width: 50%;
-            }
-            .fyre .fyre-editor-ratings > div > h3 {
-                float: left;
-                font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-                font-size: 14px;
-                margin: 0;
-                padding: 0;
-                width: 95px;
-            }
-            .fyre .fyre-editor-ratings > div:nth-child(1) > h3,
-            .fyre .fyre-editor-ratings > div:nth-child(3) > h3 {
-                width: 60px;
-            }
-            .fyre .fyre-editor-ratings button.selected {
-                background-color: #00f;
-                border: 1px dotted #666;
-                color: #fff;
-            }
-            .fyre .fyre-editor-ratings button.invalid {
-                background-color: #f00;
-                border: 1px dotted #666;
-                color: #fff;
-            }
-            .fyre .fyre-editor-container {
-                clear: both;
-            }
-        </style>
+<style>
+.fyre-comment-author-tag[data-fyre-author-tag= 'Brand Advocates'] {
+	background-color: yellow;
+	display:inline;
+	color: #000;
+
+</style>
+        
 <script type="text/javascript">
 
 /**
@@ -247,20 +204,20 @@ networkConfig["strings"] = {
 
 var convConfig = {
 	siteId: '<?=LIVEFYRE_SITE_ID?>',
-	articleId: '<?=${DATA_BODY}[ARTICLE_ID]?>',
+	articleId: '<?=${DATA_BODY}['articleId']?>',
 	el: 'livefyre',
 	app: 'reviews',
 	ratingSummaryEnabled: true,
 	ratingSubparts:2,
-    ratingDimensions: ['design', 'features', 'performance'],
+    //ratingDimensions: ['design', 'features', 'performance'],
 	// Delegates
-    ratingSelectionDelegate: ratingSelectionDelegate,
-    ratingDisplayDelegate: ratingDisplayDelegate,
-    ratingSummaryDelegate: ratingSummaryDelegate,
+//     ratingSelectionDelegate: ratingSelectionDelegate,
+//     ratingDisplayDelegate: ratingDisplayDelegate,
+//     ratingSummaryDelegate: ratingSummaryDelegate,
     
     maxRating: 5,
-	collectionMeta: '<?=${DATA_BODY}[COLLECTION_META]?>', 
-	checksum: '<?=${DATA_BODY}[CHECKSUM]?>'
+	collectionMeta: '<?=${DATA_BODY}['COLLECTION_META']?>', 
+	checksum: '<?=${DATA_BODY}['CHECKSUM']?>'
 }
 
 fyre.conv.load( networkConfig, [convConfig] );

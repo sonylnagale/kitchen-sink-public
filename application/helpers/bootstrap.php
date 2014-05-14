@@ -1,5 +1,5 @@
 <?php
-require_once ('application/libraries/firebaseLib.php');
+require_once ('application/libraries/Firebase.php');
 define('FIREBASE_INSTANCE','https://popping-fire-1902.firebaseio.com/kitchen-sink');
 
 // Let's generate some names

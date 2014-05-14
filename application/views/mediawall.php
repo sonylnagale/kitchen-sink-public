@@ -1,4 +1,4 @@
-<h1><?=${DATA_BODY}[ARTICLE_TITLE]?></h1>
+<h1><?=${DATA_BODY}['title']?></h1>
 <p>This page provides an example of the <a href="http://apps.livefyre.com/packages/Livefyre/streamhub-wall/master/overview" target="_blank">Media Wall</a> app.</p>
 
 <div id="livefyre"></div>
@@ -21,7 +21,7 @@
 	var wallViewCollection = new Collection({
 	    network: '<?=LIVEFYRE_NETWORK?>',
 	    siteId: '<?=LIVEFYRE_SITE_ID?>',
-	    articleId: '<?=${DATA_BODY}[ARTICLE_ID]?>'
+	    articleId: '<?=${DATA_BODY}['articleId']?>'
 	});
 
 	wallViewCollection.pipe(wallView);

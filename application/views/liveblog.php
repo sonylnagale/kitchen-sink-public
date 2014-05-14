@@ -1,4 +1,4 @@
-<h1><?=${DATA_BODY}[ARTICLE_TITLE]?></h1>
+<h1><?=${DATA_BODY}['title']?></h1>
 <p>This page provides an example of the <a href="http://docs.livefyre.com/developers/reference/app-types/core-apps/" target="_blank">LiveBlog</a> app, which is part of StreamHub Core.</p>
 
 <div class="row span-4">
@@ -16,9 +16,10 @@
 
 	var convConfig = {
 		siteId: '<?=LIVEFYRE_SITE_ID?>',
-		articleId: '<?=${DATA_BODY}[ARTICLE_ID]?>',
+		articleId: '<?=${DATA_BODY}['articleId']?>',
 		el: 'livefyre',
-		collectionMeta: '<?=${DATA_BODY}[COLLECTION_META]?>'
+		collectionMeta: '<?=${DATA_BODY}['COLLECTION_META']?>',
+		checksum: '<?=${DATA_BODY}['CHECKSUM']?>'
 	}
 
 	fyre.conv.load( networkConfig, [convConfig] );
