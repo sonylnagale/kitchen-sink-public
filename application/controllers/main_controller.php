@@ -30,22 +30,27 @@ class Main_Controller extends CI_Controller {
 			$page = 'home';
 			$bodyData = '';
 		} else {				// Not home page
-			$bodyData = $this->Data_cache->get_article($page);
+			//$bodyData = $this->Data_cache->get_article($page);
+			$bodyData = json_decode($this->Data->getArticle($page));
+			if (count($bodyData) == 1) {
+				$bodyData = $bodyData[0];
+			}
+			
 			$metadata = $this->Content->generateCollectionMetadata(array(
-				'article_id' => $bodyData['articleid'],
-				'title' => $bodyData['articletitle'],
-				'url' => base_url().$bodyData['articleurl'],
-				'type' => (isset($bodyData['collectiontype'])) ? $bodyData['collectiontype'] : NULL,
-				'tags' => (isset($bodyData['collectiontags'])) ? $bodyData['collectiontags'] : NULL,
-				'ratingDimensions' => (isset($bodyData['ratingDimensions'])) ? $bodyData['ratingDimensions'] : NULL,
+				'article_id' => $bodyData->articleId,
+				'title' => $bodyData->title,
+				'url' => $bodyData->url,
+				'type' => (isset($bodyData->type)) ? $bodyData->type : NULL,
+				'tags' => (isset($bodyData->tags)) ? $bodyData->tags : NULL,
+				'ratingDimensions' => (isset($bodyData->ratingDimensions)) ? $bodyData->ratingDimensions : NULL,
 			));
-			$bodyData[COLLECTION_META] = $metadata['collectionMeta'];
-			$bodyData[CHECKSUM] = $metadata['checksum'];
+			$bodyData->COLLECTION_META = $metadata['collectionMeta'];
+			$bodyData->CHECKSUM = $metadata['checksum'];
 		}
 		
 		$data = array(
 			DATA_NAV => $navData, 
-			DATA_BODY => $bodyData
+			DATA_BODY => (array)$bodyData
 		);
 		
 		$data[DATA_BODY]['USER'] = $this->User->getUserToken(array(

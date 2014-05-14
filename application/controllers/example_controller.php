@@ -23,11 +23,9 @@ class Example_Controller extends CI_Controller {
 	}
 
 	public function index($page = null)
-	{		
-		echo 'hi';
-		
+	{				
 		$data = array(
-			USER => $this->User->getUserToken(array(
+			'USER' => $this->User->getUserToken(array(
 				'user_id' => 'createtestsn',
 				'display_name' => 'create test sn'
 			))

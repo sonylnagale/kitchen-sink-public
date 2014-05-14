@@ -28,11 +28,10 @@ class Data_cache extends CI_Model {
                 COLLECTION_TYPE => TYPE_LIVECHAT
             ),
             "livereviews" => array(
-                ARTICLE_ID      => DEMO_ARTICLE_ID_PREFIX."00044",
-                ARTICLE_TITLE   => "Live Reviews",
+                ARTICLE_ID      => DEMO_ARTICLE_ID_PREFIX."00045",
+                ARTICLE_TITLE   => "Live Reviews2",
                 ARTICLE_URL     => "livereviews", 
-                COLLECTION_TYPE => TYPE_LIVEREVIEWS,
-            	DIMENSIONS => array('design','features','performance')
+                COLLECTION_TYPE => TYPE_LIVEREVIEWS
             ),
             "sidenotes" => array(
                 ARTICLE_ID      => DEMO_ARTICLE_ID_PREFIX."sidenotes_0001",

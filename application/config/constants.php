@@ -69,7 +69,7 @@ define('LIVEFYRE_SYSTEM_USER_TOKEN', 	'eyJhbGciOiAiSFMyNTYiLCAidHlwIjogIkpXVCJ9.
 define('DEMO_MEDIA_WALL_ID',			'custom-1395952392273');
 */
 
-define('DEMO_ARTICLE_ID_PREFIX',		'basic_local_');
+define('DEMO_ARTICLE_ID_PREFIX',		'snowy-delicate-frost');
 
 // LF App Types
 define('TYPE_LIVEBLOG',					'liveblog');
@@ -90,6 +90,7 @@ define('DIMENSIONS',					'ratingDimensions');
 define('DATA_NAV',						'datanav');
 define('DATA_BODY',						'databody');
 
+define('FIREBASE_INSTANCE',				'https://popping-fire-1902.firebaseio.com/kitchen-sink');
 
 /* End of file constants.php */
 /* Location: ./application/config/constants.php */
