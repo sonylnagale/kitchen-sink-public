@@ -5,3 +5,4 @@ vendor/*
 *~
 .project
 .DS_Store
+.settings

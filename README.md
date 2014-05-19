@@ -1,4 +1,4 @@
-# Project Gibson
+# Kitchen Sink
 ### Example probject using the PHP Livefyre library
 
 
