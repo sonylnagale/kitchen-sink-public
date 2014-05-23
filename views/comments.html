@@ -1,11 +1,18 @@
 {{> header }}
 {{> navbar }}
 
-<h1>{{ pagetitle }}</h1>
-<p>This page provides an example of the <a href="http://docs.livefyre.com/product/livefyre-apps/livecomments/" target="_blank">LiveComments</a> app, which is part of StreamHub Core.</p>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-4">
 
-<div id="livefyre"></div>
-
+			<h1>{{ pagetitle }}</h1>
+			<p>This page provides an example of the <a href="http://docs.livefyre.com/product/livefyre-apps/livecomments/" target="_blank">LiveComments</a> app, which is part of StreamHub Core.</p>
+		</div>
+		<div class="col-md-7" style="border-left: 1px solid #eee; padding-top:2%;">
+			<div id="livefyre"></div>
+		</div>
+	</div>
+</div>
 <script type="text/javascript">
 
 	var lfepAuthDelegate = new fyre.conv.SPAuthDelegate({engage: {app: "client-solutions.auth.fyre.co"}});

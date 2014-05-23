@@ -18,20 +18,4 @@ router.get('/', function(req, res) {
 	});
 });
 
-/** comments page */
-router.get('/comments', function(req, res) {
-	var article = Bootstrap.comments[0];
-	var content = new Content.Content();
-	
-	var meta = content.buildCollectionMeta(article.title, article.articleId, article.url, [], []);
-		
-	res.render('comments', { pagetitle: 'Comments', 
-		Constants: Constants, 
-		Bootstrap: Bootstrap,
-		articles: articles,
-		article: article,
-		meta: meta
-	});
-});
-
 module.exports = router;
