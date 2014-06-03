@@ -1,5 +1,5 @@
 # Kitchen Sink
-### Example probject using the PHP Livefyre library
+### Example project using the Node.js Livefyre library
 
 
 1. ```npm install```
