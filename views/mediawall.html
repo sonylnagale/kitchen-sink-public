@@ -1,0 +1,40 @@
+{{> header }}
+{{> navbar }}
+<link rel="stylesheet" href="http://cdn.livefyre.com/libs/sdk/v2.7.0/streamhub-sdk.min.css" />
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+
+            <h1>{{ pagetitle }}</h1>
+            <p>This page provides an example of the <a href="http://docs.livefyre.com/product/livefyre-apps/livecomments/" target="_blank">LiveMediaWall™</a> app.</p>
+        </div>
+        <div class="col-md-7" style="border-left: 1px solid #eee; padding-top:2%;">
+            <div id="wall"></div>
+        </div>
+    </div>
+</div>
+
+<script src="http://cdn.livefyre.com/libs/sdk/v2.11.0/streamhub-sdk.min.js"></script>
+<script src="http://cdn.livefyre.com/libs/apps/Livefyre/streamhub-wall/v2.3.0-build.184/streamhub-wall.min.js"></script>
+
+<script type="text/javascript">
+
+
+    Livefyre.require(['streamhub-wall', 'streamhub-sdk/collection'], function (WallView, Collection) {
+        
+        var collection = new Collection({
+            network: '{{ Constants.LIVEFYRE_NETWORK }}',
+            siteId: '{{ Constants.LIVEFYRE_SITE_ID }}',
+            articleId: '{{ article.articleId }}',
+        });
+
+        var wallView = new WallView({
+            el: document.getElementById('wall')
+        });
+
+        collection.pipe(wallView);
+
+    });
+
+</script>
