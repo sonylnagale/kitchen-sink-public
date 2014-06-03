@@ -17,5 +17,4 @@ Content.prototype.buildCollectionMeta = function(title, articleId, url, tags, ty
 		"collectionMetaToken" : this.site.buildCollectionMetaToken(title, articleId, url),
 		"checksum" : this.site.buildChecksum(title, url, tags)
 	};
-	
-}
+};
