@@ -8,6 +8,7 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 var comments = require('./routes/comments');
 var mediawall = require('./routes/mediawall');
+var liveblog = require('./routes/liveblog');
 
 var app = express();
 
@@ -29,6 +30,7 @@ app.use('/', routes);
 app.use('/comments', comments);
 app.use('/users', users);
 app.use('/mediawall', mediawall);
+app.use('/liveblog', liveblog)
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
