@@ -2,3 +2,5 @@
 /node_modules
 /npm-debug.log
 /nohup.out
+*.sublime-project
+*.sublime-workspace
