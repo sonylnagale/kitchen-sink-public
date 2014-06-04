@@ -9,6 +9,7 @@ var Firebase = require('firebase');
 var firebase = new Firebase('https://popping-fire-1902.firebaseio.com/kitchen-sink/' + Constants.DEMO_ARTICLE_ID_PREFIX);
 
 var articles = [];
+
 for (var articleType in Bootstrap) {
   articles.push(Bootstrap[articleType][0]);
 }

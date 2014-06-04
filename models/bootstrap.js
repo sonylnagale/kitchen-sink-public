@@ -35,12 +35,13 @@ var Bootstrap = {
     'articleId': 'custom-1397754619766',
     'title': 'Media Wall',
     'url': Constants.DEMO_URL_PREFIX + 'mediawall'
-   }],
-  'gallery': [{
+   }]
+  /*'gallery': [{
     'articleId': 'custom-1395952392273',
     'title': 'Streamhub Gallery',
     'url': Constants.DEMO_URL_PREFIX + 'gallery'
    }]
+   */
 };
 
 module.exports = Bootstrap;

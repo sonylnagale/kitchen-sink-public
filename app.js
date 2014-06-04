@@ -13,6 +13,7 @@ var mediawall = require('./routes/mediawall');
 var liveblog = require('./routes/liveblog');
 var livereviews = require('./routes/livereviews');
 var livechat = require('./routes/livechat');
+var sidenotes = require('./routes/sidenotes');
 
 var app = express();
 
@@ -21,7 +22,7 @@ app.engine('html', require('hogan-express'));
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'html');
-app.set('partials', {header: 'header', navbar: 'navbar'});
+app.set('partials', {header: '_header', navbar: '_navbar', sidenotesContent: '_sidenotesContent'});
 
 app.use(favicon());
 app.use(logger('dev'));
@@ -37,6 +38,7 @@ app.use('/mediawall', mediawall);
 app.use('/liveblog', liveblog);
 app.use('/livereviews', livereviews);
 app.use('/livechat', livechat);
+app.use('/sidenotes', sidenotes);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
