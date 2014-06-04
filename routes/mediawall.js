@@ -14,24 +14,25 @@ for (articleType in Bootstrap) {
 }
 
 /** comments page */
-router.get('/:index(\\d+)?', function(req, res) {
+router.get('/', function(req, res) {
 
-    if (typeof req.params.index === 'undefined') {
-        req.params.index = 0; // default to zeroith
-    }
+  if (!req.params.index) {
+    req.params.index = 0; // default to zeroith
+  }
 
-    var article = Bootstrap.comments[req.params.index];
-    var content = new Content.Content();
+  var article = Bootstrap.comments[req.params.index];
+  var content = new Content.Content();
 
-    var meta = content.buildCollectionMeta(article.title, article.articleId, article.url, [], []);
+  var meta = content.buildCollectionMeta(article.title, article.articleId, article.url, [], []);
 
-    res.render('mediawall', { pagetitle: 'Media Wall',
-        Constants: Constants,
-        Bootstrap: Bootstrap,
-        articles: articles,
-        article: article,
-        meta: meta
-    });
+  res.render('mediawall', {
+    pagetitle: 'Media Wall',
+    Constants: Constants,
+    Bootstrap: Bootstrap,
+    articles: articles,
+    article: article,
+    meta: meta
+  });
 
 });
 
