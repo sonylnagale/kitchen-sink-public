@@ -18,13 +18,13 @@ router.get('/:index(\\d+)?', function(req, res) {
 	};
 	
 	
-	firebase.child('collection').child('comments').once('value', function(collections) {
+	firebase.child('collection').child('liveblog').once('value', function(collections) {
 		var article = collections.val()[req.params.index];
 		var content = new Content.Content();
 		
 		var meta = content.buildCollectionMeta(article.title, article.articleId, article.url, [], []);
 		
-		res.render('comments', { pagetitle: 'Comments', 
+		res.render('liveblog', { pagetitle: 'LiveBlog', 
 			Constants: Constants, 
 			Bootstrap: Bootstrap,
 			articles: articles,
