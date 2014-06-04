@@ -26,10 +26,12 @@
 		siteId: '{{ Constants.LIVEFYRE_SITE_ID }}',
 		articleId: '{{ article.articleId }}',
 		el: 'livefyre',
-		collectionMeta: '{{ meta.collectionMetaToken }}', 
+		collectionMeta: '{{ meta.collectionMetaToken }}',
 		checksum: '{{ meta.checksum }}'
 	}
 
 	fyre.conv.load( networkConfig, [convConfig] );
 
 </script>
+
+{{> footer }}

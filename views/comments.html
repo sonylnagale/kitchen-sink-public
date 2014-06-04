@@ -13,6 +13,7 @@
 		</div>
 	</div>
 </div>
+
 <script type="text/javascript">
 
 	var lfepAuthDelegate = new fyre.conv.SPAuthDelegate({engage: {app: "client-solutions.auth.fyre.co"}});
@@ -26,10 +27,12 @@
 		siteId: '{{ Constants.LIVEFYRE_SITE_ID }}',
 		articleId: '{{ article.articleId }}',
 		el: 'livefyre',
-		collectionMeta: '{{ meta.collectionMetaToken }}', 
+		collectionMeta: '{{ meta.collectionMetaToken }}',
 		checksum: '{{ meta.checksum }}'
 	}
 
 	fyre.conv.load( networkConfig, [convConfig] );
 
 </script>
+
+{{> footer }}

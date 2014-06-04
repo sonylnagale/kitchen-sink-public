@@ -6,7 +6,7 @@ var favicon = require('static-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var routes = require('./routes/index');
+var home = require('./routes/index');
 var users = require('./routes/users');
 var comments = require('./routes/comments');
 var mediawall = require('./routes/mediawall');
@@ -22,16 +22,16 @@ app.engine('html', require('hogan-express'));
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'html');
-app.set('partials', {header: '_header', navbar: '_navbar', sidenotesContent: '_sidenotesContent'});
+app.set('partials', {header: '_header', navbar: '_navbar', sidenotesContent: '_sidenotesContent', footer: '_footer'});
 
 app.use(favicon());
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(__dirname + '/public'));
 
-app.use('/', routes);
+app.use('/', home);
 app.use('/comments', comments);
 app.use('/users', users);
 app.use('/mediawall', mediawall);

@@ -6,3 +6,9 @@ body {
 a {
   color: #00B7FF;
 }
+
+div.customer_panoramic {
+  display: block;
+  width: 100%;
+  min-height: 1066px;
+}

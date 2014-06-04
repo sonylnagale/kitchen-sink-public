@@ -22,7 +22,7 @@
 
 
     Livefyre.require(['streamhub-wall', 'streamhub-sdk/collection'], function (WallView, Collection) {
-        
+
         var collection = new Collection({
             network: '{{ Constants.LIVEFYRE_NETWORK }}',
             siteId: '{{ Constants.LIVEFYRE_SITE_ID }}',
@@ -38,3 +38,5 @@
     });
 
 </script>
+
+{{> footer }}

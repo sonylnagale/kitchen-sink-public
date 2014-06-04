@@ -24,7 +24,7 @@
 
     var convConfig = {
       network: '{{ Constants.LIVEFYRE_NETWORK }}',
-      selectors: '.post-content > p',
+      selectors: '.post-content > p, .post-content img',
       authDelegate: lfepAuthDelegate,
       siteId: '{{ Constants.LIVEFYRE_SITE_ID }}',
       articleId: '{{ article.articleId }}',
@@ -36,3 +36,5 @@
     new Livefyre.Sidenotes(convConfig);
 
 </script>
+
+{{> footer }}
