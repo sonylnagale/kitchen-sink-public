@@ -1,0 +1,38 @@
+{{> header }}
+{{> navbar }}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+
+            <h1>{{ pagetitle }}</h1>
+            <p>This page provides an example of the <a href="http://docs.livefyre.com/product/livefyre-apps/livecomments/" target="_blank">Sidenotes™</a> app.</p>
+        </div>
+        <div class="col-md-7" style="border-left: 1px solid #eee; padding-top:2%;">
+            <div id="livefyre">
+            {{> sidenotesContent }}
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="http://cdn.livefyre.com/libs/sidenotes/v1/sidenotes.min.js"></script>
+
+<script type="text/javascript">
+
+    var lfepAuthDelegate = new fyre.conv.SPAuthDelegate({engage: {app: "client-solutions.fyre.co"}});
+
+    var convConfig = {
+      network: '{{ Constants.LIVEFYRE_NETWORK }}',
+      selectors: '.post-content > p',
+      authDelegate: lfepAuthDelegate,
+      siteId: '{{ Constants.LIVEFYRE_SITE_ID }}',
+      articleId: '{{ article.articleId }}',
+      collectionMeta: '{{ meta.collectionMetaToken }}',
+      checksum: '{{ meta.checksum }}',
+      app: 'sidenotes'
+    };
+
+    new Livefyre.Sidenotes(convConfig);
+
+</script>
