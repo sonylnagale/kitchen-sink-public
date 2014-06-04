@@ -6,9 +6,8 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
-var comments = require('./routes/comments');
+var core = require('./routes/core');
 var mediawall = require('./routes/mediawall');
-var liveblog = require('./routes/liveblog');
 
 var app = express();
 
@@ -27,10 +26,11 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/comments', comments);
+app.use('/:type(comments|liveblog|livechat)', function(req,res,next,something) {
+	console.log(something);
+});
 app.use('/users', users);
 app.use('/mediawall', mediawall);
-app.use('/liveblog', liveblog)
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {

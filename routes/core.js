@@ -13,10 +13,10 @@ for (articleType in Bootstrap) {
 
 /** comments page */
 router.get('/:index(\\d+)?', function(req, res) {
+	console.log(req.url);
 	if (typeof req.params.index == 'undefined') {
 		req.params.index = 0; // default to zeroith
 	};
-	
 	
 	firebase.child('collection').child('comments').once('value', function(collections) {
 		var article = collections.val()[req.params.index];

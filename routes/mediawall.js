@@ -13,7 +13,7 @@ for (articleType in Bootstrap) {
   articles.push(Bootstrap[articleType][0]);
 }
 
-/** comments page */
+/** mediawall page */
 router.get('/:index(\\d+)?', function(req, res) {
 
     if (typeof req.params.index === 'undefined') {

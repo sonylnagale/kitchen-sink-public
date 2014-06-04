@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "supervisor ./bin/www"
   },
   "dependencies": {
     "express": "~4.2.0",
@@ -14,6 +14,7 @@
     "debug": "~0.7.4",
     "hogan-express": "latest",
     "livefyre":"~1.1.4",
-    "firebase":"~1.0.15-3"
+    "firebase":"~1.0.15-3",
+    "supervisor":"latest"
   }
 }
