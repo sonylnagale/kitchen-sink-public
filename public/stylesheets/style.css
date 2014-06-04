@@ -1,5 +1,5 @@
 body {
-  padding: 50px;
+  padding: 15px;
   font: 14px/1.4 "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -11,4 +11,8 @@ div.customer_panoramic {
   display: block;
   width: 100%;
   min-height: 1066px;
+}
+
+.container {
+  min-width: 430px;
 }
