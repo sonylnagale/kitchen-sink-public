@@ -16,3 +16,8 @@ div.customer_panoramic {
 .container {
   min-width: 430px;
 }
+
+.js_image-annotation-footnote,
+.magnifier.lightBox {
+  display: none;
+}
