@@ -19,7 +19,7 @@ function ask(question, callback) {
 
 
 
-ask("Who has the biggest office in Livefyre? ", function decrypt(keyphrase) {
+ask("Who has the biggest office in Livefyre? ", function (keyphrase) {
 	gpg.decryptFile('models/constants.js.gpg', function(err, contents){
 			if (err) {
 				console.log(err);
