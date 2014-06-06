@@ -1,4 +1,4 @@
-# Kitchen Sink
+# KITCHEN SINK
 
 # PURPOSE
 The purpose of this repo is to get the Node.js Livefyre Library in your local development environment.
