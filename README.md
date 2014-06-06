@@ -23,6 +23,7 @@ In Terminal.app, copy and paste the following steps (when you see a “$” in t
 * $ cd kitchen-sink
 * $ git checkout node
 * $ npm install
+* $ make install
 * $ npm start
 * Open a web browser and go to http://localhost:3000
 * If you see the home page, do a jig, go to fridge, have wine and cheese.
