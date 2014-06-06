@@ -15,6 +15,7 @@
     "hogan-express": "latest",
     "livefyre":"~1.1.4",
     "firebase":"~1.0.15-3",
-    "supervisor":"~0.6.0"
+    "supervisor":"~0.6.0",
+    "gpg":"latest"
   }
 }
