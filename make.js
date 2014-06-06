@@ -21,14 +21,17 @@ function ask(question, callback) {
 
 ask("Who has the biggest office in Livefyre? ", function decrypt(keyphrase) {
 	gpg.decryptFile('models/constants.js.gpg', function(err, contents){
-		fs.writeFile("models/constants.js", contents, function(err) {
-		    if(err) {
-		        console.log(err);
-		    } else {
-		        console.log("Ready to go!");
-		        process.exit();
-		    }
-		}); 
-
+			if (err) {
+				console.log(err);
+			} else {
+				fs.writeFile("models/constants.js", contents, function(err) {
+				    if(err) {
+				        console.log(err);
+				    } else {
+				        console.log("Ready to go!");
+				        process.exit();
+				    }
+				}); 
+			}
 	});
 });
