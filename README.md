@@ -21,14 +21,14 @@ If command line tools is not installed:
 If you already have command line tools installed:
 * $ cd ~/ && mkdir “dev” && cd dev
 * $ git clone https://github.com/cid8600/kitchen-sink && cd kitchen-sink
-* $ git checkout node
 * $ npm install
 * $ make install
-* $ npm start
+* Answer prompt for security purposes (hint: answer is in all lowercase)
+* Hit "y" to create your randomly generated Heroku instance name
 * Open a web browser and go to http://localhost:3000
 
 If you see the home page: 
 * do a jig && go to the fridge && have wine and cheese
 
 Else:
-* contact cid@livefyre.com || snagale@livefyre.com
+* snagale@livefyre.com || contact cid@livefyre.com
