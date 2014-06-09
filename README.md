@@ -11,11 +11,14 @@ Assuming your environment lacks command line tools & node, here are the steps to
 
 * Go to http://nodejs.org/download/ and download the Universal Mac OS X Installer (.pkg)
 * Install Node.js by double-clicking node-v0.10.X.pkg.
-* $ git --version (This should prompt you to install command line tools. Click install => agree.)
-* Go to /Applications/Utilities/ and launch Terminal.app
+* * Go to /Applications/Utilities/ and launch Terminal.app
 
 In Terminal.app, copy and paste the following steps (when you see a “$” in the next steps, it means to run the following command. Do not paste in the “$” into Terminal.app):
 
+If command line tools is not installed:
+* $ git --version (This should prompt you to install command line tools. Click install => agree.);
+
+If you already have command line tools installed:
 * $ cd ~/ && mkdir “dev” && cd dev
 * $ git clone https://github.com/cid8600/kitchen-sink && cd kitchen-sink
 * $ git checkout node
