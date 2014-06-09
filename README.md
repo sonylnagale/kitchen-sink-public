@@ -15,10 +15,10 @@ Assuming your environment lacks command line tools & node, here are the steps to
 
 In Terminal.app, copy and paste the following steps (when you see a “$” in the next steps, it means to run the following command. Do not paste in the “$” into Terminal.app):
 
-If command line tools is not installed:
+If command line tools are not installed:
 * $ git --version (This should prompt you to install command line tools. Click install => agree)
 
-If you already have command line tools installed:
+If command line tools are installed:
 * $ cd ~/ && mkdir “dev” && cd dev
 * $ git clone https://github.com/cid8600/kitchen-sink && cd kitchen-sink
 * $ npm install
@@ -27,8 +27,14 @@ If you already have command line tools installed:
 * Hit "y" to create your randomly generated Heroku instance name
 * Open a web browser and go to http://localhost:3000
 
-If you see the home page: 
+If you see the home page:
 * do a jig && go to the fridge && have wine and cheese
 
-Else:
+If you do not see the home page:
 * snagale@livefyre.com || contact cid@livefyre.com
+
+# STARTING NODE
+* $ cd ~/dev/kitchen-sink/ && npm start
+
+# STOPING NODE
+* $ ^C
