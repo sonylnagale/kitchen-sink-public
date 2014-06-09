@@ -1,2 +1,10 @@
+decrypt:
+	node decrypt.js
+	
+prefix:
+	node install.js
+	
 install:
-	node make.js
+	node decrypt.js
+	node install.js
+	npm start

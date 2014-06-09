@@ -1,0 +1,43 @@
+{
+	"collection": {
+		"comments": [{
+			"articleId" : "{{DEMO_ARTICLE_ID_PREFIX}}_0001",
+			"title" : "Comments",
+			"url" : "{{DEMO_URL_PREFIX}}/comments"
+		 }],
+		 "liveblog": [{
+		 	"articleId" : "{{DEMO_ARTICLE_ID_PREFIX}}_0002",
+		 	"title" : "Live Blog",
+		 	"url" : "{{DEMO_URL_PREFIX}}/liveblog",
+		 	"type": "liveblog"
+		 }],
+		 "livechat": [{
+		 	"articleId": "{{DEMO_ARTICLE_ID_PREFIX}}_0003",
+		 	"title":"Live Chat",
+		 	"url":"{{DEMO_URL_PREFIX}}/livechat",
+		 	"type":"livechat"
+		 }],
+		 "livereviews": [{
+		 	"articleId": "{{DEMO_ARTICLE_ID_PREFIX}}_0004",
+		 	"title": "Live Reviews",
+		 	"url":"{{DEMO_URL_PREFIX}}/livereviews",
+		 	"type":"reviews"
+		 }],
+		 "sidenotes": [{
+		 	"articleId": "{{DEMO_ARTICLE_ID_PREFIX}}_sidenotes_0001",
+		 	"title": "Sidenotes",
+		 	"url": "{{DEMO_URL_PREFIX}}/sidenotes",
+		 	"type":"sidenotes"
+		 }],
+		 "mediawall": [{
+		 	"articleId":"custom-1397754619766",
+		 	"title":"Media Wall",
+		 	"url":"{{DEMO_URL_PREFIX}}/mediawall"
+		 }],
+		 "gallery": [{
+		 	"articleId":"custom-1395952392273",
+		 	"title":"Streamhub Gallery",
+		 	"url":"{{DEMO_URL_PREFIX}}/gallery"
+		 }]
+	}
+}
