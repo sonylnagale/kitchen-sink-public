@@ -38,9 +38,15 @@ ask("Use " + prefix + " for your instance name? [y/n]", function (data) {
 	if (data != "y") {
 		ask ("Enter instance name: ", function(data) {
 			prefix = data;
-		})
+			setPrefix(prefix);
+		});
+	} else {
+		setPrefix(prefix);
 	}
-	
+});
+
+
+function setPrefix(prefix) {
 	var fs = require('fs');
 	fs.readFile("./models/constants.js", 'utf8', function(err,data) {
 		if (err) {
@@ -75,7 +81,4 @@ ask("Use " + prefix + " for your instance name? [y/n]", function (data) {
 		});
 		
 	});
-	
-	
-
-});
+}
