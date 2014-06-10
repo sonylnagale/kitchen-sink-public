@@ -30,7 +30,7 @@ If you see the home page:
 * do a jig && go to the fridge && have wine and cheese
 
 If you do not see the home page:
-* contact snagale@livefyre.com || cid@livefyre.com
+* contact Sonyl || Cid
 
 # STARTING NODE
 * $ cd ~/dev/kitchen-sink/ && npm start
