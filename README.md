@@ -23,7 +23,7 @@ If command line tools are installed:
 * $ git clone https://github.com/cid8600/kitchen-sink && cd kitchen-sink
 * $ make install
 * Answer prompt for security purposes (hint: answer is in all lowercase)
-* Hit "y" to create your randomly generated Heroku instance name || "n" to make your own 
+* Hit "y" to create your randomly generated instance name || "n" to make your own 
 * Open a web browser and go to http://localhost:3000
 
 If you see the home page:
