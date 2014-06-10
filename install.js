@@ -23,7 +23,7 @@ var adjs = ["autumn", "hidden", "bitter", "misty", "silent", "empty", "dry", "da
 var nouns  = ["waterfall", "river", "breeze", "moon", "rain", "wind", "sea", "morning",
               "snow", "lake", "sunset", "pine", "shadow", "leaf", "dawn", "glitter",
               "forest", "hill", "cloud", "meadow", "sun", "glade", "bird", "brook",
-              "butterfly", "bush", "dew", "dust", "field", "fire", "flower", "firefly",
+              "butterfly", "dew", "dust", "field", "fire", "flower", "firefly",
               "feather", "grass", "haze", "mountain", "night", "pond", "darkness",
               "snowflake", "silence", "sound", "sky", "shape", "surf", "thunder",
               "violet", "water", "wildflower", "wave", "water", "resonance", "sun",
@@ -69,6 +69,8 @@ function setPrefix(prefix) {
 		} 
 		
 		data = data.replace('{{DEMO_ARTICLE_ID_PREFIX}}',prefix);
+		data = data.replace('{{DEMO_URL_PREFIX}}', 'http://' + prefix + ".livefyre.com");
+
 		var Firebase = require('firebase');
 
 		var firebase = new Firebase('https://popping-fire-1902.firebaseio.com/kitchen-sink/' + prefix);

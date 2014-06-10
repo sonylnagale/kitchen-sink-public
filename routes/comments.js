@@ -22,7 +22,7 @@ router.get('/', function (req, res) {
   firebase.child('collection').child('comments').once('value', function (collections) {
     var article = collections.val()[req.params.index];
     var content = new Content.Content();
-
+    
     var meta = content.buildCollectionMeta(article.title, article.articleId, article.url, [], []);
 
     res.render('comments', {
