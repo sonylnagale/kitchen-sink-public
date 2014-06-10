@@ -31,7 +31,7 @@ If you see the home page:
 * do a jig && go to the fridge && have wine and cheese
 
 If you do not see the home page:
-* snagale@livefyre.com || contact cid@livefyre.com
+* Sonyl:: snagale@livefyre.com || Cid:: cid@livefyre.com
 
 # STARTING NODE
 * $ cd ~/dev/kitchen-sink/ && npm start
