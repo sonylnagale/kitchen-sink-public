@@ -1,13 +1,13 @@
 function ask(question, callback) {
  var stdin = process.stdin, stdout = process.stdout;
- 
+
  stdin.resume();
  stdout.write(question + ": ");
- 
+
  stdin.once('data', function(data) {
    data = data.toString().trim();
    callback(data);
-   
+
  });
 };
 
@@ -16,7 +16,7 @@ var adjs = ["autumn", "hidden", "bitter", "misty", "silent", "empty", "dry", "da
             "patient", "twilight", "dawn", "crimson", "wispy", "weathered", "blue",
             "billowing", "broken", "cold", "falling", "frosty", "green",
             "long", "late", "lingering", "bold", "little", "morning", "muddy", "old",
-	        "red", "rough", "still", "small", "sparkling", "throbbing", "shy",
+	        "red", "rough", "still", "small", "sparkling", "shy",
 			"wandering", "withered", "wild", "black", "young", "holy", "solitary",
 			"fragrant", "aged", "snowy", "proud", "floral", "restless", "divine",
 			"polished", "ancient", "purple", "lively", "nameless"];
@@ -51,25 +51,25 @@ function setPrefix(prefix) {
 	fs.readFile("./models/constants.js", 'utf8', function(err,data) {
 		if (err) {
 		    return console.log(err);
-		} 
-		
+		}
+
 		data = data.replace('little-broken-silence',prefix);
-		
+
 		fs.writeFile("./models/constants.js", data, function(err) {
 		    if(err) {
 		        console.log(err);
 		    } else {
 		        console.log("Done!");
 		    }
-		}); 
+		});
 	});
 	fs.readFile("./bootstrapdata.json", 'utf8', function(err,data) {
 		if (err) {
 		    return console.log(err);
-		} 
-		
-		data = data.replace('{{DEMO_ARTICLE_ID_PREFIX}}',prefix);
-		data = data.replace('{{DEMO_URL_PREFIX}}', 'http://' + prefix + ".livefyre.com");
+		}
+
+		data = data.replace(/{{DEMO_ARTICLE_ID_PREFIX}}/g,prefix);
+		data = data.replace(/{{DEMO_URL_PREFIX}}/g, 'http://' + prefix + ".livefyre.com");
 
 		var Firebase = require('firebase');
 
@@ -81,6 +81,6 @@ function setPrefix(prefix) {
 			console.log('Updated Firebase');
 			process.exit();
 		});
-		
+
 	});
 }
