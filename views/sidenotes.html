@@ -16,24 +16,28 @@
     </div>
 </div>
 
-<script src="http://cdn.livefyre.com/libs/sidenotes/v1/sidenotes.min.js"></script>
-
 <script type="text/javascript">
 
-    var lfepAuthDelegate = new fyre.conv.SPAuthDelegate({engage: {app: "client-solutions.fyre.co"}});
 
     var convConfig = {
       network: '{{ Constants.LIVEFYRE_NETWORK }}',
       selectors: '.post-content > p, .post-content img',
-      authDelegate: lfepAuthDelegate,
       siteId: '{{ Constants.LIVEFYRE_SITE_ID }}',
       articleId: '{{ article.articleId }}',
-      collectionMeta: '{{ meta.collectionMetaToken }}',
-      checksum: '{{ meta.checksum }}',
-      app: 'sidenotes'
-    };
+      collectionMeta: '{{ meta }}',
+      checksum: '{{ checksum }}'
+   	};
 
-    new Livefyre.Sidenotes(convConfig);
+	 Livefyre.require(['sidenotes#1', 'auth', 'lfep-auth-delegate#0'], function(Conv, auth, LFEPAuthDelegate) {
+		var lfepAuthDelegate = new LFEPAuthDelegate({
+			engageOpts: {
+				app: "client-solutions.auth.fyre.co"
+			}
+		});
+
+        new Conv(convConfig);
+        auth.delegate(lfepAuthDelegate);
+    });
 
 </script>
 

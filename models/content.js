@@ -9,14 +9,3 @@ var Content = module.exports.Content = function() {
 
   return this;
 };
-
-Content.prototype.buildCollectionMeta = function(title, articleId, url, tags, type) {
-  if (!type) {
-    type = 'livecomments';
-  }
-
-  return {
-    'collectionMetaToken': this.site.buildCollectionMetaToken(title, articleId, url),
-    'checksum': this.site.buildChecksum(title, url, tags)
-  };
-};

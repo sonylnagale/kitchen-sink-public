@@ -20,7 +20,7 @@ var Bootstrap = {
     'type': 'livechat'
    }],
   'livereviews': [{
-    'articleId': Constants.DEMO_ARTICLE_ID_PREFIX + '_0004',
+    'articleId': Constants.DEMO_ARTICLE_ID_PREFIX + '_0005',
     'title': 'Live Reviews',
     'url': Constants.DEMO_URL_PREFIX + 'livereviews',
     'type': 'reviews'

@@ -24,7 +24,8 @@ router.get('/', function (req, res) {
     var article = collections.val()[req.params.index];
     var content = new Content.Content();
 
-    var meta = content.buildCollectionMeta(article.title, article.articleId, article.url, [], []);
+    var meta = content.site.buildCollectionMetaToken(article.title, article.articleId, article.url, { type: 'reviews'});
+    var checksum = content.site.buildChecksum(article.title, article.url, [])
 
     res.render('livereviews', {
       pagetitle: 'Live Reviews',
@@ -32,7 +33,8 @@ router.get('/', function (req, res) {
       Bootstrap: Bootstrap,
       articles: articles,
       article: article,
-      meta: meta
+      meta: meta,
+      checksum: checksum
     });
   });
 });

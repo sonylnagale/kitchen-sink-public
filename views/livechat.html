@@ -15,22 +15,29 @@
 </div>
 <script type="text/javascript">
 
-  var lfepAuthDelegate = new fyre.conv.SPAuthDelegate({engage: {app: "client-solutions.auth.fyre.co"}});
 
   var networkConfig = {
-    network: '{{ Constants.LIVEFYRE_NETWORK }}',
-    authDelegate: lfepAuthDelegate
+    network: '{{ Constants.LIVEFYRE_NETWORK }}'
   }
 
   var convConfig = {
     siteId: '{{ Constants.LIVEFYRE_SITE_ID }}',
     articleId: '{{ article.articleId }}',
     el: 'livefyre',
-    collectionMeta: '{{ meta.collectionMetaToken }}',
-    checksum: '{{ meta.checksum }}'
+    collectionMeta: '{{ meta }}',
+    checksum: '{{ checksum }}'
   }
 
-  fyre.conv.load( networkConfig, [convConfig] );
+	 Livefyre.require(['fyre.conv#3', 'auth', 'lfep-auth-delegate#0'], function(Conv, auth, LFEPAuthDelegate) {
+		var lfepAuthDelegate = new LFEPAuthDelegate({
+			engageOpts: {
+				app: "client-solutions.auth.fyre.co"
+			}
+		});
+
+        new Conv(networkConfig, [convConfig], function(commentsWidget) {}());
+        auth.delegate(lfepAuthDelegate);
+    });
 
 </script>
 

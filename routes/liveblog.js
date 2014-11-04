@@ -7,7 +7,7 @@ var Bootstrap = require('../models/bootstrap');
 var Content = require('../models/content');
 var Firebase = require('firebase');
 var firebase = new Firebase('https://popping-fire-1902.firebaseio.com/kitchen-sink/' + Constants.DEMO_ARTICLE_ID_PREFIX);
-
+var livefyre = require('livefyre')
 var articles = [];
 for (var articleType in Bootstrap) {
   articles.push(Bootstrap[articleType][0]);
@@ -23,7 +23,8 @@ router.get('/', function (req, res) {
     var article = collections.val()[req.params.index];
     var content = new Content.Content();
 
-    var meta = content.buildCollectionMeta(article.title, article.articleId, article.url, [], []);
+    var meta = content.site.buildCollectionMetaToken(article.title, article.articleId, article.url, { type: 'liveblog'});
+    var checksum = content.site.buildChecksum(article.title, article.url, [])
 
     res.render('liveblog', {
       pagetitle: 'LiveBlog',
@@ -31,7 +32,8 @@ router.get('/', function (req, res) {
       Bootstrap: Bootstrap,
       articles: articles,
       article: article,
-      meta: meta
+      meta: meta,
+      checksum: checksum
     });
   });
 });
