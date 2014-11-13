@@ -7,7 +7,8 @@ var Bootstrap = require('../models/bootstrap');
 var Content = require('../models/content');
 var Firebase = require('firebase');
 var firebase = new Firebase('https://popping-fire-1902.firebaseio.com/kitchen-sink/' + Constants.DEMO_ARTICLE_ID_PREFIX);
-
+console.log(Constants.DEMO_ARTICLE_ID_PREFIX);
+var Helpers = require('../helpers/helpers.js');
 var articles = [];
 for (var articleType in Bootstrap) {
   articles.push(Bootstrap[articleType][0]);
@@ -15,6 +16,8 @@ for (var articleType in Bootstrap) {
 
 /** comments page */
 router.get('/', function (req, res) {
+	
+	
   if (!req.params.index) {
     req.params.index = 0; // default to zeroith
   }

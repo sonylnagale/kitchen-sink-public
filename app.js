@@ -1,21 +1,34 @@
 'use strict';
+var evh = require('express-vhost'),
+ express = require('express'),
+ path = require('path'),
+ favicon = require('static-favicon'),
+ logger = require('morgan'),
+ cookieParser = require('cookie-parser'),
+ home = require('./routes/index'),
+ users = require('./routes/users'),
+ comments = require('./routes/comments'),
+ mediawall = require('./routes/mediawall'),
+ liveblog = require('./routes/liveblog'),
+ livereviews = require('./routes/livereviews'),
+ livechat = require('./routes/livechat'),
+ sidenotes = require('./routes/sidenotes');
 
-var express = require('express');
-var path = require('path');
-var favicon = require('static-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-var home = require('./routes/index');
-var users = require('./routes/users');
-var comments = require('./routes/comments');
-var mediawall = require('./routes/mediawall');
-var liveblog = require('./routes/liveblog');
-var livereviews = require('./routes/livereviews');
-var livechat = require('./routes/livechat');
-var sidenotes = require('./routes/sidenotes');
+var appFactory = function(echo) {
+    var app = express();
+    app.get('/', function(req, res) {
+        res.send(req.get('host'));
+    });
+
+    return app;
+};
 
 var app = express();
+
+app.use(evh.vhost());
+
+evh.register('test1-local', appFactory('test1'));
+evh.register('*.sales.livefyre.com', appFactory());
 
 app.engine('html', require('hogan-express'));
 
@@ -26,8 +39,8 @@ app.set('partials', {header: '_header', navbar: '_navbar', sidenotesContent: '_s
 
 app.use(favicon());
 app.use(logger('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded());
+//app.use(bodyParser.json());
+//app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(express.static(__dirname + '/public'));
 
@@ -70,6 +83,5 @@ app.use(function (err, req, res, next) {
         error: {}
     });
 });
-
 
 module.exports = app;
